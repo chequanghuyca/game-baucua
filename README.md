@@ -1,4 +1,4 @@
-# TÔM CUA CÁ REACT JS (REACT FUNCTION COMPONENT - RFC)
+# GĂM BẦU CUA
 Luyện sử dụng các hook lấy và đẩy data từ redux trong reactJS và xử lý nghiệp vụ trong store
 
 ## Xử lý nghiệp vụ
