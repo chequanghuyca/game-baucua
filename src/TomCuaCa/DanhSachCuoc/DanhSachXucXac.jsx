@@ -27,7 +27,6 @@ export default function DanhSachXucXac(props) {
         </button>
 
       <div id='moBat' style={{ width: '350px', height: '350px', borderRadius: '50%', background: 'red', position: 'absolute', top: '8px', display: 'none' }} className='image' onClick={()=>{ document.getElementById('xocBat').style.display = 'block'; document.getElementById('upBat').style.display = 'none';}} >
-        {/* <h3 className='text-center'>CHẠM ĐỂ LẮC VÀ MỞ </h3> */}
         <i className='text-center fa fa-hand-pointer-o' style={{fontSize:'100px', marginTop:'120px'}} aria-hidden='true'></i>
       </div>
     </div>
