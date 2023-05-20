@@ -8,7 +8,7 @@ export default function DanhSachXucXac(props) {
   const mangXucXac = useSelector(state => state.BauCuaReducer.mangXucXac)
 
   return ( <>
-      <div className='container' style={{ width: '230px', height: '230px', textAlign:'center'}}>
+      <div className='container' style={{ width: '230px', height: '230px', textAlign:'center', marginTop: '25px'}}>
         <div style={{ position: 'relative' }}>
           <img src='./img/dia.png' alt='' style={{ position: 'absolute', transform: 'translate(-50%, 3%)', width: '100%' }} />
         </div>
@@ -20,18 +20,18 @@ export default function DanhSachXucXac(props) {
         </div>
 
         <div className='row justify-content-evenly'>
-          <div className='col-6' style={{padding: '25px 0 0 30px'}}> 
+          <div className='col-6' style={{padding: '8px 0 0 35px'}}> 
             <XucXac XucXacItem={mangXucXac[1]}/>
           </div>
 
-          <div className='col-6' style={{padding:'25px 30px 0 0'}}> 
+          <div className='col-6' style={{padding:'8px 35px 0 0'}}> 
             <XucXac style={{marginBotton:'20px'}} XucXacItem={mangXucXac[2]}/>
           </div>
         </div>
       </div>
 
       <div className='row justify-content-center'>
-        <button id='xocBat' className='btn btn-success' style={{ display:'none', marginTop:'25px', borderRadius:'25%' }} 
+        <div id='xocBat' style={{ display:'none', marginTop:'15px'}} 
           onClick={() => { 
             document.getElementById('moBat').style.display = 'none'; 
             document.getElementById('xocBat').style.display = 'none'; 
@@ -39,17 +39,17 @@ export default function DanhSachXucXac(props) {
             dispatch({type: 'XOC_DIA'});
           }}>
 
-          <h2 style={{margin:'auto'}}>MỞ</h2>
-        </button>
+          <img className='chen' src='./img/mo.png' alt='' />
+        </div>
 
-        <button id='upBat' className='btn btn-primary' style={{ display:'block', marginTop:'25px', borderRadius:'25%'}} 
+        <div id='upBat' style={{ display:'block', marginTop:'15px'}} 
           onClick={() => { 
             document.getElementById('moBat').style.display = 'block'; 
             document.getElementById('xocBat').style.display = 'none';
           }}>
 
-          <h2 style={{margin:'auto'}}>ÚP</h2>
-        </button>
+          <img className='chen' src='./img/up.png' alt='' />
+        </div>
 
         <div id='moBat' className='image' style={{ width: '250px', height: '250px', position: 'absolute', top: '8px', display: 'none' }} 
           onClick={() => {
@@ -57,7 +57,7 @@ export default function DanhSachXucXac(props) {
             document.getElementById('upBat').style.display = 'none';
           }}>
 
-          <img src='./img/chen.png' alt='' style={{ position: 'absolute', top: '100%', transform: 'translate(-14%, -105%)', width: '145%' }} />
+          <img src='./img/chen.png' alt='' style={{ position: 'absolute', top: '100%', transform: 'translate(-14%, -100%)', width: '145%' }} />
           <i className='text-center fa fa-hand-pointer-o' style={{ position: 'absolute', top: '30%',  transform: 'translate(145%, -40%)', fontSize: '70px', zIndex: '1', color: 'red' }} aria-hidden='true'></i>
         </div>
       </div>  
