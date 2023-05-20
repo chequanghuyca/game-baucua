@@ -6,7 +6,7 @@ export default function Baucua() {
   return (
     <div className='container' style={{ margin:'auto' }}>
       <div className='text-center'>
-          <img src='./img/nen.png' alt='' style={{ width: '70%', marginTop: '15px' }} />
+          <img src='./img/nen.png' alt='' style={{ width: '350px', marginTop: '15px' }} />
       </div>
 
       <div className='row'>

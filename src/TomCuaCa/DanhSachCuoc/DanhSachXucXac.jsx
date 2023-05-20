@@ -31,7 +31,7 @@ export default function DanhSachXucXac(props) {
       </div>
 
       <div className='row justify-content-center'>
-        <button id='xocBat' className='btn btn-success' style={{ display:'none', marginTop:'25px', borderRadius:'20%' }} 
+        <button id='xocBat' className='btn btn-success' style={{ display:'none', marginTop:'25px', borderRadius:'25%' }} 
           onClick={() => { 
             document.getElementById('moBat').style.display = 'none'; 
             document.getElementById('xocBat').style.display = 'none'; 
@@ -39,16 +39,16 @@ export default function DanhSachXucXac(props) {
             dispatch({type: 'XOC_DIA'});
           }}>
 
-          <h1>MỞ</h1>
+          <h2 style={{margin:'auto'}}>MỞ</h2>
         </button>
 
-        <button id='upBat' className='btn btn-primary' style={{ display:'block', marginTop:'25px', borderRadius:'20%'}} 
+        <button id='upBat' className='btn btn-primary' style={{ display:'block', marginTop:'25px', borderRadius:'25%'}} 
           onClick={() => { 
             document.getElementById('moBat').style.display = 'block'; 
             document.getElementById('xocBat').style.display = 'none';
           }}>
 
-          <h1>ÚP</h1>
+          <h2 style={{margin:'auto'}}>ÚP</h2>
         </button>
 
         <div id='moBat' className='image' style={{ width: '250px', height: '250px', position: 'absolute', top: '8px', display: 'none' }} 
