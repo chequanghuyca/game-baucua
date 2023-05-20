@@ -4,13 +4,19 @@ import DanhSachXucXac from './DanhSachCuoc/DanhSachXucXac'
   
 export default function Baucua() {
   return (
-    <div className='container-fluid'>
-      <div className='text-center container pb-1'>
-        <p style={{ fontSize: '35px', fontWeight: 'bold', marginTop: '50px' }}>GAME BẦU CUA</p>
+    <div className='container' style={{ margin:'auto' }}>
+      <div className='text-center'>
+          <img src='./img/nen.png' alt='' style={{ width: '70%', marginTop: '15px' }} />
       </div>
-      <div className='row container m-auto'>
-        <div className='col-12 d-flex justify-content-center'> <DanhSachQuanCuoc/> </div>
-        <div className='col-12 d-flex justify-content-center' style={{marginBottom: '20px'}}> <DanhSachXucXac/> </div>
+
+      <div className='row'>
+        <div className='col-12'> 
+          <DanhSachQuanCuoc/> 
+        </div>
+        
+        <div className='col-12'> 
+          <DanhSachXucXac/> 
+        </div>
       </div>
     </div>
   )

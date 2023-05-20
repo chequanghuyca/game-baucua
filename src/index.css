@@ -16,13 +16,13 @@ code {
   display: block;
   margin: 0 auto;
 }
-.image h3{
-  margin: 50% auto;
 
+.image h3{
+  margin: 30% auto;
 }
 .image:focus, .image:hover {
   cursor: pointer;
-  animation: wobble 0.1s 14;
+  animation: wobble 0.2s 5;
 }
 
 @keyframes wobble {

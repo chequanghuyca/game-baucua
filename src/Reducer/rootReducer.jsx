@@ -3,5 +3,5 @@ import BauCuaReducer from './BauCuaReducer';
 
 
 export const rootReducer = combineReducers ({
-    BauCuaReducer:BauCuaReducer
+    BauCuaReducer: BauCuaReducer
 })

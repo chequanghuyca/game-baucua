@@ -1,21 +1,26 @@
 import React from 'react'
-import QuanCuoc from './QuanCuoc'
-import { useSelector } from 'react-redux';
 
 export default function DanhSachQuanCuoc() {
-
-    const danhSachCuoc = useSelector(state => state.BauCuaReducer.danhSachCuoc)
-    const renderDanhSachCuoc = ()=> {
-        return danhSachCuoc.map((sp,index) =>{
-            return  <div className='col-4 pb-3' key={index}>
-                <QuanCuoc quanCuoc={sp}></QuanCuoc>
-            </div>
-        })
-    }
-
     return (
-        <div className='row'>
-            {renderDanhSachCuoc()}
+        <div className='row justify-content-center' style={{width: '330px', margin:'auto'}}>   
+            <div className='col-4'>
+                <img src='./img/nai.png' alt='' style={{ width: '100%' }} />
+            </div>
+            <div className='col-4'>
+                <img src='./img/bau.png' alt='' style={{ width: '100%' }} />
+            </div>
+            <div className='col-4'>
+                <img src='./img/ga.png' alt='' style={{ width: '100%' }} />
+            </div>
+            <div className='col-4'>
+                <img src='./img/ca.png' alt='' style={{ width: '100%' }} />
+            </div>
+            <div className='col-4'>
+                <img src='./img/cua.png' alt='' style={{ width: '100%' }} />
+            </div>
+            <div className='col-4'>
+                <img src='./img/tom.png' alt='' style={{ width: '100%' }} />
+            </div>
         </div>
     )
 }
