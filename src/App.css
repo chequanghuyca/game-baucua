@@ -132,10 +132,10 @@ body {
 
 .chen {
   width: 30%;
-  transform: translate(115%, 3%);
+  transform: translate(115%, -30%);
 }
 
 .chen:hover {
   width: 35%;
-  transform: translate(90%, 3%);
+  transform: translate(90%, -30%);
 }

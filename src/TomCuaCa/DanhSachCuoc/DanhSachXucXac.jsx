@@ -9,13 +9,39 @@ export default function DanhSachXucXac(props) {
   const xx1 = mangXucXac[0].ma, xx2 = mangXucXac[1].ma, xx3 = mangXucXac[2].ma;
 
   return (<>
-      <div className='text-center' style={{marginTop: '10px', color: 'orange'}}>
-        <h4 style={{fontFamily:'Raleway'}}>Ván trước: 
-          {xx1 === 'nai' ? ' Nai, ' : xx1 === 'bau' ? ' Bầu, ' : xx1 === 'ga' ? ' Gà, ' : xx1 === 'ca' ? ' Cá, ' : xx1 === 'cua' ? ' Cua, ' : ' Tôm, '}
-          {xx2 === 'nai' ? ' Nai, ' : xx2 === 'bau' ? ' Bầu, ' : xx2 === 'ga' ? ' Gà, ' : xx2 === 'ca' ? ' Cá, ' : xx2 === 'cua' ? ' Cua, ' : ' Tôm, '}
-          {xx3 === 'nai' ? ' Nai' : xx3 === 'bau' ? ' Bầu' : xx3 === 'ga' ? ' Gà' : xx3 === 'ca' ? ' Cá' : xx3 === 'cua' ? ' Cua' : ' Tôm'}
-        </h4>
+      <div className='container' style={{ width: '300px', textAlign:'center', marginTop: '10px'}}>
+        <div className='row justify-content-center'>
+          <div className='col-4'> 
+            {String(xx1) === 'nai' ? <img src='./img/kq-nai.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx1) === 'bau' ? <img src='./img/kq-bau.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx1) === 'ga' ? <img src='./img/kq-ga.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx1) === 'ca' ? <img src='./img/kq-ca.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx1) === 'cua' ? <img src='./img/kq-cua.png' alt='' style={{ height: '30px' }} /> : 
+              <img src='./img/kq-tom.png' alt='' style={{ height: '30px' }} />
+            }
+          </div>
+          <div className='col-4'> 
+            {String(xx2) === 'nai' ? <img src='./img/kq-nai.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx2) === 'bau' ? <img src='./img/kq-bau.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx2) === 'ga' ? <img src='./img/kq-ga.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx2) === 'ca' ? <img src='./img/kq-ca.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx2) === 'cua' ? <img src='./img/kq-cua.png' alt='' style={{ height: '30px' }} /> : 
+              <img src='./img/kq-tom.png' alt='' style={{ height: '30px' }} />
+            }
+          </div>
+          <div className='col-4'> 
+            {String(xx3) === 'nai' ? <img src='./img/kq-nai.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx3) === 'bau' ? <img src='./img/kq-bau.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx3) === 'ga' ? <img src='./img/kq-ga.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx3) === 'ca' ? <img src='./img/kq-ca.png' alt='' style={{ height: '30px' }} /> : 
+              String(xx3) === 'cua' ? <img src='./img/kq-cua.png' alt='' style={{ height: '30px' }} /> : 
+              <img src='./img/kq-tom.png' alt='' style={{ height: '30px' }} />
+            }
+          </div>
+            
+        </div>
       </div>
+      
   
       <div className='container' style={{ width: '230px', height: '230px', textAlign:'center', marginTop: '25px'}}>
         <div style={{ position: 'relative' }}>
