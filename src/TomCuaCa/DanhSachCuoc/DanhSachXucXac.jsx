@@ -5,9 +5,18 @@ import { useDispatch, useSelector } from 'react-redux'
 export default function DanhSachXucXac(props) {
 
   const dispatch = useDispatch();
-  const mangXucXac = useSelector(state => state.BauCuaReducer.mangXucXac)
+  const mangXucXac = useSelector(state => state.BauCuaReducer.mangXucXac);
+  const xx1 = mangXucXac[0].ma, xx2 = mangXucXac[1].ma, xx3 = mangXucXac[2].ma;
 
-  return ( <>
+  return (<>
+      <div className='text-center' style={{marginTop: '10px', color: 'orange'}}>
+        <h4 style={{fontFamily:'Raleway'}}>Ván trước: 
+          {xx1 === 'nai' ? ' Nai, ' : xx1 === 'bau' ? ' Bầu, ' : xx1 === 'ga' ? ' Gà, ' : xx1 === 'ca' ? ' Cá, ' : xx1 === 'cua' ? ' Cua, ' : ' Tôm, '}
+          {xx2 === 'nai' ? ' Nai, ' : xx2 === 'bau' ? ' Bầu, ' : xx2 === 'ga' ? ' Gà, ' : xx2 === 'ca' ? ' Cá, ' : xx2 === 'cua' ? ' Cua, ' : ' Tôm, '}
+          {xx3 === 'nai' ? ' Nai' : xx3 === 'bau' ? ' Bầu' : xx3 === 'ga' ? ' Gà' : xx3 === 'ca' ? ' Cá' : xx3 === 'cua' ? ' Cua' : ' Tôm'}
+        </h4>
+      </div>
+  
       <div className='container' style={{ width: '230px', height: '230px', textAlign:'center', marginTop: '25px'}}>
         <div style={{ position: 'relative' }}>
           <img src='./img/dia.png' alt='' style={{ position: 'absolute', transform: 'translate(-50%, 3%)', width: '100%' }} />
@@ -31,7 +40,7 @@ export default function DanhSachXucXac(props) {
       </div>
 
       <div className='row justify-content-center'>
-        <div id='xocBat' style={{ display:'none', marginTop:'15px'}} 
+        <div id='xocBat' style={{ display:'none'}} 
           onClick={() => { 
             document.getElementById('moBat').style.display = 'none'; 
             document.getElementById('xocBat').style.display = 'none'; 
@@ -42,7 +51,7 @@ export default function DanhSachXucXac(props) {
           <img className='chen' src='./img/mo.png' alt='' />
         </div>
 
-        <div id='upBat' style={{ display:'block', marginTop:'15px'}} 
+        <div id='upBat' style={{ display:'block'}} 
           onClick={() => { 
             document.getElementById('moBat').style.display = 'block'; 
             document.getElementById('xocBat').style.display = 'none';
@@ -55,9 +64,10 @@ export default function DanhSachXucXac(props) {
           onClick={() => {
             document.getElementById('xocBat').style.display = 'block'; 
             document.getElementById('upBat').style.display = 'none';
+            document.getElementById('vanTruoc').style.display = 'block';
           }}>
 
-          <img src='./img/chen.png' alt='' style={{ position: 'absolute', top: '100%', transform: 'translate(-14%, -100%)', width: '145%' }} />
+          <img src='./img/chen.png' alt='' style={{ position: 'absolute', top: '110%', transform: 'translate(-14%, -100%)', width: '145%' }} />
           <i className='text-center fa fa-hand-pointer-o' style={{ position: 'absolute', top: '30%',  transform: 'translate(145%, -40%)', fontSize: '70px', zIndex: '1', color: 'red' }} aria-hidden='true'></i>
         </div>
       </div>  

@@ -15,23 +15,21 @@ const initialState = {
 
 }
 
-const randomDice = () => {
-    const dice = [...initialState.danhSachCuoc];
-    const randomDice = [];
-    for (let i = 0; i < 3; i++) {
-        const randomIndex = Math.floor(Math.random() * dice.length);
-        randomDice.push(dice[randomIndex]);
-    }
-    return randomDice;
-}
-
 const bauCuaReducer = (state = initialState) => {
-    state.mangXucXac = randomDice();
+    const dice = [...state.danhSachCuoc];
+    const randomDice = [];
     
-    state.danhSachCuoc = state.danhSachCuoc.map(dice => {
-        return dice;
-    });
-    return {...state};
+    for (let i = 0; i < 3; i++) {
+      const randomIndex = Math.floor(Math.random() * dice.length);
+      randomDice.push(dice[randomIndex]);
+    }
+    
+    return {
+      ...state,
+      mangXucXac: randomDice,
+      danhSachCuoc: state.danhSachCuoc.map(dice => dice)
+    };
 };
+
 
 export default bauCuaReducer;
