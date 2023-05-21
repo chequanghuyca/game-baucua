@@ -90,11 +90,10 @@ export default function DanhSachXucXac(props) {
           onClick={() => {
             document.getElementById('xocBat').style.display = 'block'; 
             document.getElementById('upBat').style.display = 'none';
-            document.getElementById('vanTruoc').style.display = 'block';
           }}>
 
           <img src='./img/chen.png' alt='' style={{ position: 'absolute', top: '110%', transform: 'translate(-14%, -100%)', width: '145%' }} />
-          <i className='text-center fa fa-hand-pointer-o' style={{ position: 'absolute', top: '30%',  transform: 'translate(145%, -40%)', fontSize: '70px', zIndex: '1', color: 'red' }} aria-hidden='true'></i>
+          <i className='text-center fa fa-hand-paper-o' style={{ position: 'absolute', top: '30%',  transform: 'translate(320%, -20%)', fontSize: '35px', zIndex: '1' }} aria-hidden='true'></i>
         </div>
       </div>  
     </>
