@@ -28,9 +28,6 @@ const bauCuaReducer = (state = initialState) => {
     const randomIndex = Math.floor(Math.random() * dice.length);
     randomDice.push(dice[randomIndex]);
   }
-  console.log('--------------------');
-  console.log('khac1', demKhacNhau);
-  console.log('cap1', demCap);  
 
   if (randomDice[0].ma !== randomDice[1].ma && randomDice[1].ma !== randomDice[2].ma && randomDice[0].ma !== randomDice[2].ma) {
     if (demKhacNhau === 3 && demCap === 0) {
