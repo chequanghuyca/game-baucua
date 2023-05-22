@@ -34,10 +34,9 @@ const bauCuaReducer = (state = initialState) => {
       demKhacNhau = 0;
       demCap = 0;
       console.log('Bão 3 con khác');
-      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
-      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
-      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+      resultDice.push(...Array(3).fill({ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' }));
       bao++;
+      if (bao === 7) bao = 1;
     } else {
       demCap = 0;
       demKhacNhau++;
@@ -48,28 +47,20 @@ const bauCuaReducer = (state = initialState) => {
       demKhacNhau = 0;
       demCap = 0;
       console.log('Bão 2 con giống');
-      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
-      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
-      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+      resultDice.push(...Array(3).fill({ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' }));
       bao++;
+      if (bao === 7) bao = 1;
     } else {
       demKhacNhau = 0;
       demCap++;
       resultDice = [...randomDice];
     }
   } else {
-    resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
-    resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
-    resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+    resultDice.push(...Array(3).fill({ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' }));
     bao++;
+    if (bao === 7) bao = 1;
     demKhacNhau = 0;
     demCap = 0;
-  }
-
-  console.log(bao);
-
-  if(bao === 6) {
-    bao = 1;
   }
   
   return {
