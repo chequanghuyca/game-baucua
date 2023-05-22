@@ -13,16 +13,16 @@ const initialState = {
     { ma: 'tom', hinhAnh: './img/tom.png' }
   ],
   demKhacNhau: null,
-  demCap: null
+  demCap: null,
+  bao: 1
 }
 
 const bauCuaReducer = (state = initialState) => {
   const dice = [...state.danhSachCuoc];
   let randomDice = [], resultDice = [];
-  let demKhacNhau = state.demKhacNhau;
-  let demCap = state.demCap;
+  let { demKhacNhau, demCap, bao } = state;
   const listXucXac = {1: 'nai', 2: 'bau', 3: 'ga', 4: 'ca', 5: 'cua', 6: 'tom'};
-  const randomBao = Math.floor(Math.random() * 6) + 1;
+  const listBao = {1: 1, 2: 5, 3: 3, 4: 6, 5: 2, 6: 4 }; 
 
   for (let i = 0; i < 3; i++) {
     const randomIndex = Math.floor(Math.random() * dice.length);
@@ -34,9 +34,10 @@ const bauCuaReducer = (state = initialState) => {
       demKhacNhau = 0;
       demCap = 0;
       console.log('Bão 3 con khác');
-      resultDice.push({ ma: listXucXac[randomBao], hinhAnh: './img/' + listXucXac[randomBao] + '.png' });
-      resultDice.push({ ma: listXucXac[randomBao], hinhAnh: './img/' + listXucXac[randomBao] + '.png' });
-      resultDice.push({ ma: listXucXac[randomBao], hinhAnh: './img/' + listXucXac[randomBao] + '.png' });
+      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+      bao++;
     } else {
       demCap = 0;
       demKhacNhau++;
@@ -47,18 +48,28 @@ const bauCuaReducer = (state = initialState) => {
       demKhacNhau = 0;
       demCap = 0;
       console.log('Bão 2 con giống');
-      resultDice.push({ ma: listXucXac[randomBao], hinhAnh: './img/' + listXucXac[randomBao] + '.png' });
-      resultDice.push({ ma: listXucXac[randomBao], hinhAnh: './img/' + listXucXac[randomBao] + '.png' });
-      resultDice.push({ ma: listXucXac[randomBao], hinhAnh: './img/' + listXucXac[randomBao] + '.png' });
+      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+      resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+      bao++;
     } else {
       demKhacNhau = 0;
       demCap++;
       resultDice = [...randomDice];
     }
   } else {
-    resultDice = [...randomDice];
+    resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+    resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+    resultDice.push({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' });
+    bao++;
     demKhacNhau = 0;
     demCap = 0;
+  }
+
+  console.log(bao);
+
+  if(bao === 6) {
+    bao = 1;
   }
   
   return {
@@ -66,7 +77,8 @@ const bauCuaReducer = (state = initialState) => {
     mangXucXac: resultDice,
     danhSachCuoc: state.danhSachCuoc.map(dice => dice),
     demKhacNhau: demKhacNhau,
-    demCap: demCap
+    demCap: demCap,
+    bao: bao
   };
 };
 
