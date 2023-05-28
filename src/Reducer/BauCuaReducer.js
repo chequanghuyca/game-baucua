@@ -45,27 +45,27 @@ const bauCuaReducer = (state = initialState) => {
       if (remBef === 'nai') {
         resultDice.push({ ma: randomDice[0].ma, hinhAnh: './img/' + randomDice[0].ma + '.png' });
         resultDice.push({ ma: randomDice[1].ma, hinhAnh: './img/' + randomDice[1].ma + '.png' });
-        (randomDice[0].ma !== 'cua' || randomDice[0].ma !== 'cua') ? resultDice.push({ ma: 'cua', hinhAnh: './img/cua.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
+        (randomDice[0].ma !== 'cua' && randomDice[0].ma !== 'cua') ? resultDice.push({ ma: 'cua', hinhAnh: './img/cua.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
       } else if (remBef === 'cua') {
         resultDice.push({ ma: randomDice[0].ma, hinhAnh: './img/' + randomDice[0].ma + '.png' });
         resultDice.push({ ma: randomDice[1].ma, hinhAnh: './img/' + randomDice[1].ma + '.png' });
-        (randomDice[0].ma !== 'ga' || randomDice[0].ma !== 'ga') ? resultDice.push({ ma: 'ga', hinhAnh: './img/ga.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
+        (randomDice[0].ma !== 'ga' && randomDice[0].ma !== 'ga') ? resultDice.push({ ma: 'ga', hinhAnh: './img/ga.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
       } else if (remBef === 'ga') {
         resultDice.push({ ma: randomDice[0].ma, hinhAnh: './img/' + randomDice[0].ma + '.png' });
         resultDice.push({ ma: randomDice[1].ma, hinhAnh: './img/' + randomDice[1].ma + '.png' });
-        (randomDice[0].ma !== 'tom' || randomDice[0].ma !== 'tom') ? resultDice.push({ ma: 'tom', hinhAnh: './img/tom.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
+        (randomDice[0].ma !== 'tom' && randomDice[0].ma !== 'tom') ? resultDice.push({ ma: 'tom', hinhAnh: './img/tom.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
       } else if (remBef === 'tom') {
         resultDice.push({ ma: randomDice[0].ma, hinhAnh: './img/' + randomDice[0].ma + '.png' });
         resultDice.push({ ma: randomDice[1].ma, hinhAnh: './img/' + randomDice[1].ma + '.png' });
-        (randomDice[0].ma !== 'bau' || randomDice[0].ma !== 'bau') ? resultDice.push({ ma: 'bau', hinhAnh: './img/bau.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
+        (randomDice[0].ma !== 'bau' && randomDice[0].ma !== 'bau') ? resultDice.push({ ma: 'bau', hinhAnh: './img/bau.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
       } else if (remBef === 'bau') {
         resultDice.push({ ma: randomDice[0].ma, hinhAnh: './img/' + randomDice[0].ma + '.png' });
         resultDice.push({ ma: randomDice[1].ma, hinhAnh: './img/' + randomDice[1].ma + '.png' });
-        (randomDice[0].ma !== 'ca' || randomDice[0].ma !== 'ca') ? resultDice.push({ ma: 'ca', hinhAnh: './img/ca.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
+        (randomDice[0].ma !== 'ca' && randomDice[0].ma !== 'ca') ? resultDice.push({ ma: 'ca', hinhAnh: './img/ca.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
       } else if (remBef === 'ca') {
         resultDice.push({ ma: randomDice[0].ma, hinhAnh: './img/' + randomDice[0].ma + '.png' });
         resultDice.push({ ma: randomDice[1].ma, hinhAnh: './img/' + randomDice[1].ma + '.png' });
-        (randomDice[0].ma !== 'nai' || randomDice[0].ma !== 'nai') ? resultDice.push({ ma: 'nai', hinhAnh: './img/nai.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
+        (randomDice[0].ma !== 'nai' && randomDice[0].ma !== 'nai') ? resultDice.push({ ma: 'nai', hinhAnh: './img/nai.png' }) : resultDice.push({ ma: randomDice[2].ma, hinhAnh: './img/' + randomDice[2].ma + '.png' });
       } else {
         resultDice = [...randomDice];
       }
