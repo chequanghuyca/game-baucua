@@ -34,7 +34,6 @@ const bauCuaReducer = (state = initialState) => {
     if (demKhacNhau === 3 && demCap === 0) {
       demKhacNhau = 0;
       demCap = 0;
-      console.log('Bão 3 con khác');
       resultDice.push(...Array(3).fill({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' }));
       bao++;
       if (bao === 7) {
@@ -96,12 +95,11 @@ const bauCuaReducer = (state = initialState) => {
       }
     }
     remBef = resultDice[0].ma;
-    
+
   } else if ((randomDice[0].ma === randomDice[1].ma && randomDice[0].ma !== randomDice[2].ma) || (randomDice[0].ma === randomDice[2].ma && randomDice[0].ma !== randomDice[1].ma) || (randomDice[1].ma === randomDice[2].ma && randomDice[1].ma !== randomDice[0].ma)) {
     if (demCap === 3 && demKhacNhau === 0) {
       demKhacNhau = 0;
       demCap = 0;
-      console.log('Bão 2 con giống');
       resultDice.push(...Array(3).fill({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' }));
       bao++;
       if (bao === 7) {
@@ -195,7 +193,6 @@ const bauCuaReducer = (state = initialState) => {
     remBef = resultDice[0].ma;
 
   } else {
-    console.log('Bão ngẫu nhiên')
     resultDice.push(...Array(3).fill({ ma: listXucXac[listBao[bao]], hinhAnh: './img/' + listXucXac[listBao[bao]] + '.png' }));
     bao++;
     if (bao === 7) {
@@ -203,6 +200,7 @@ const bauCuaReducer = (state = initialState) => {
     } 
     demKhacNhau = 0;
     demCap = 0;
+    remBef = resultDice[0].ma;
   }
   
   return {
