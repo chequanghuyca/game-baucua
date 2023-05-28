@@ -118,7 +118,7 @@ const bauCuaReducer = (state = initialState) => {
           if (randomDice[1].ma !== 'cua') {
             resultDice.push({ ma: 'cua', hinhAnh: './img/cua.png' });
           } else {
-            resultDice.push({ ma: randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma + '.png' });
+            resultDice.push({ ma: randomDice[[1, 2, 3, 4, 6][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[1, 2, 3, 4, 6][Math.floor(Math.random() * 5)]].ma + '.png' });
           }
         }
       } else if (remBef === 'cua') {
@@ -144,7 +144,7 @@ const bauCuaReducer = (state = initialState) => {
           if (randomDice[1].ma !== 'tom') {
             resultDice.push({ ma: 'tom', hinhAnh: './img/tom.png' });
           } else {
-            resultDice.push({ ma: randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma + '.png' });
+            resultDice.push({ ma: randomDice[[1, 2, 3, 4, 5][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[1, 2, 3, 4, 5][Math.floor(Math.random() * 5)]].ma + '.png' });
           }
         }
       } else if (remBef === 'tom') {
@@ -157,7 +157,7 @@ const bauCuaReducer = (state = initialState) => {
           if (randomDice[1].ma !== 'bau') {
             resultDice.push({ ma: 'bau', hinhAnh: './img/bau.png' });
           } else {
-            resultDice.push({ ma: randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma + '.png' });
+            resultDice.push({ ma: randomDice[[1, 3, 4, 5, 6][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[1, 3, 4, 5, 6][Math.floor(Math.random() * 5)]].ma + '.png' });
           }
         }
       } else if (remBef === 'bau') {
@@ -170,7 +170,7 @@ const bauCuaReducer = (state = initialState) => {
           if (randomDice[1].ma !== 'ca') {
             resultDice.push({ ma: 'ca', hinhAnh: './img/ca.png' });
           } else {
-            resultDice.push({ ma: randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma + '.png' });
+            resultDice.push({ ma: randomDice[[1, 2, 3, 5, 6][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[1, 2, 3, 5, 6][Math.floor(Math.random() * 5)]].ma + '.png' });
           }
         }
       } else if (remBef === 'ca') {
@@ -183,7 +183,7 @@ const bauCuaReducer = (state = initialState) => {
           if (randomDice[1].ma !== 'nai') {
             resultDice.push({ ma: 'nai', hinhAnh: './img/nai.png' });
           } else {
-            resultDice.push({ ma: randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[1,2,3,4,6][Math.floor(Math.random() * 5)]].ma + '.png' });
+            resultDice.push({ ma: randomDice[[2, 3, 4, 5, 6][Math.floor(Math.random() * 5)]].ma, hinhAnh: './img/' + randomDice[[2, 3, 4, 5, 6][Math.floor(Math.random() * 5)]].ma + '.png' });
           }
         }
       } else {
