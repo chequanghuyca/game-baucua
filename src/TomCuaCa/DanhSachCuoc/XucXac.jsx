@@ -4,7 +4,7 @@ export default function XucXac(props) {
     let { XucXacItem } = props
     return (
         <Fragment>
-            <img src={XucXacItem.hinhAnh} alt='' style={{ width: '60px' }} />
+            <img src={XucXacItem.hinhAnh} alt='' style={{ width: '80px' }} />
         </Fragment>
     )
 }

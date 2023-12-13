@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function DanhSachQuanCuoc() {
     return (
-        <div className='row justify-content-center' style={{width: '330px', margin:'auto'}}>   
+        <div className='row justify-content-center' style={{ width: '360px', height: '30%', margin: 'auto' }}>
             <div className='col-4'>
                 <img src='./img/nai.png' alt='' style={{ width: '100%' }} />
             </div>
